@@ -96,7 +96,7 @@ void createWebServer()
               content += ipStr;
               content += "<form method='post' action='restart'><input type='submit' value='Restart'></form><p>";
               content += st;
-              content += "</p><form method='get' action='setting'><label>SSID: </label><input required name='ssid' value=\"" + ssid + "\" length=32><label>PASS: </label><input required type='password' name='pass' value=\"" + password + "\" length=64><label>Websocket Address: </label><input required name='ip' value=\"" + websockets_server_host + "\" length=15><input type='submit'></form>";
+              content += "</p><form method='get' action='setting'><label>SSID: </label><input required name='ssid' value=\"" + ssid + "\" length=32><br><label>PASS: </label><input required type='password' name='pass' value=\"" + password + "\" length=64><br><label>Websocket Address: </label><input required name='ip' value=\"" + websockets_server_host + "\" length=15><input type='submit'></form>";
               content += "</html>";
               request->send(200, "text/html", content);
             });
