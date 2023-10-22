@@ -29,9 +29,8 @@ def findHand():
             if hands:
                 hand1 = hands[0]
                 fingers = detector.fingersUp(hand1)
-                fingers = fingers.count(1)
             else:
-                fingers = -1
+                fingers = []
 
             # cv2.imshow("Image", frame)
             newImg = cv2.imencode(".jpg", frame)[1]
